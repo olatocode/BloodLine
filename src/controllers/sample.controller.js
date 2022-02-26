@@ -1,5 +1,6 @@
 const userSample = require('../models/sample.model');
 
+// This function is use for creating a new Blood Sample for a user
 exports.createUserSample = async (req, res, next) => {
   try {
     const { userName, gender, age, phoneNumber, rhesusFactor, bloodGroup } =
@@ -35,6 +36,7 @@ exports.createUserSample = async (req, res, next) => {
   }
 };
 
+// This function shows all Blood Sample created by users
 exports.fetchAllUserSample = async (req, res) => {
   try {
     const showAll_BloodSample = await find();
@@ -50,6 +52,8 @@ exports.fetchAllUserSample = async (req, res) => {
   }
 };
 
+
+// This function is used for updating a Blood Sample created
 exports.updateAUserSample = async (req, res) => {
   try {
     const { id } = req.params;
@@ -71,6 +75,7 @@ exports.updateAUserSample = async (req, res) => {
   }
 };
 
+// This function is used for deleting a Blood Sample created
 exports.deleteAUserSample = async (req, res) => {
   try {
     const { id } = req.params;
