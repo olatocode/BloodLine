@@ -1,5 +1,7 @@
 const userSample = require('../models/sample.model');
 
+// The properties of userSample model was used for CRUD operation of Blood Sample:
+
 // This function is use for creating a new Blood Sample for a user
 exports.createUserSample = async (req, res, next) => {
   try {
