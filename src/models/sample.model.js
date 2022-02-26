@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+
+// To create a Blood Sample Schema
 const bloodSample_Schema = new mongoose.Schema(
   {
     userName: {
