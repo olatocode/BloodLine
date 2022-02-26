@@ -1,0 +1,27 @@
+{
+  "name": "BloodLine",
+  "version": "1.0.0",
+  "description": "Bloodline aims to remove obstacles in checking, receiving and donating matching blood with little or no hassle.",
+  "repository": "https://github.com/olatocode/BloodLine.git",
+  "author": "Tobi Awosola",
+  "license": "MIT",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js",
+    "lint:fix": "eslint --fix ./*.js"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": true,
+    "trailingComma": "none"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "eslint": "^8.9.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}
