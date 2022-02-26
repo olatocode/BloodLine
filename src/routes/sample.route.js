@@ -2,10 +2,10 @@ const userSample = require('../controllers/sample.controller');
 const express = require('express');
 const router = express.Router();
 
-// These are route api for test 
+// These are the Blood Sample route APIs e.g '/addBloodSample'
 router.post('/addBloodSample', userSample.createUserSample);
 
-router.get('/viewBloodSamples/:id', userSample.fetchAllUserSample);
+router.get('/viewBloodSamples', userSample.fetchAllUserSample);
 
 router.patch('/updateBloodSample/:id', userSample.updateAUserSample);
 
