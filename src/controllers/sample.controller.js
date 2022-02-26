@@ -41,7 +41,7 @@ exports.createUserSample = async (req, res, next) => {
 // This function shows all Blood Sample created by users
 exports.fetchAllUserSample = async (req, res) => {
   try {
-    const showAll_BloodSample = await find();
+    const showAll_BloodSample = await userSample.find();
 
     return res.status(200).json({
       message: 'Blood Sample shown successfully',
@@ -53,7 +53,6 @@ exports.fetchAllUserSample = async (req, res) => {
     });
   }
 };
-
 
 // This function is used for updating a Blood Sample created
 exports.updateAUserSample = async (req, res) => {
