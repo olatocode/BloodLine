@@ -36,6 +36,6 @@ const bloodSample_Schema = new mongoose.Schema(
   }
 );
 
-// To convert bloodSample_Schema into a model of 'User'
-const sampleModel = mongoose.model('userSample', bloodSample_Schema);
-module.exports = sampleModel;
+// To convert bloodSample_Schema into a model of 'userSample'
+const bloodSample_Model = mongoose.model('userSample', bloodSample_Schema);
+module.exports = bloodSample_Model;
