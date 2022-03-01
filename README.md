@@ -12,6 +12,6 @@
 
 [BloodLine](https://documenter.getpostman.com/view/19291153/UVkqqZNJ)
 
-## Authors
+## Author
 
 - [Tobi Awosola](https://www.github.com/olatocode)

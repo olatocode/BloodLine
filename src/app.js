@@ -4,23 +4,24 @@ const morgan = require('morgan');
 const userSampleRouter = require('./routes/sample.route');
 const app = express();
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 dotenv.config();
+
 const port = process.env.PORT;
 
 // extracting database connection
-const database = require('./database/connectdb');
-database.connectDB();
+const connect = require('./database/connectdb');
+connect;
 
 // baser url
 app.get('/', (req, res) => {
-  res.json({
-    message: 'base url'
+  res.send({
+    message: 'BloodLine App'
   });
 });
 
-// baser url for the app path
-
+// base url for the app path in postman
 app.use('/api/v1', userSampleRouter);
 
 app.listen(port, () => {
