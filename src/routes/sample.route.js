@@ -7,6 +7,8 @@ router.post('/addBloodSample', userSample.createUserSample);
 
 router.get('/viewBloodSamples', userSample.fetchAllUserSample);
 
+router.get('/viewOneBloodSamples', userSample.fetchAUserSample);
+
 router.patch('/updateBloodSample/:id', userSample.updateAUserSample);
 
 router.delete('/deleteBloodSample/:id', userSample.deleteAUserSample);

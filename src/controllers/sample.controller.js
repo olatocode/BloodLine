@@ -54,6 +54,22 @@ exports.fetchAllUserSample = async (req, res) => {
   }
 };
 
+exports.fetchAUserSample = async (req, res) => {
+  try {
+    const { id } = req.query;
+    const showOne_BloodSample = await userSample.find({ _id: id });
+
+    return res.status(200).json({
+      message: 'A Blood Sample shown successfully',
+      showOne_BloodSample
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: error.message
+    });
+  }
+};
+
 // This function is used for updating a Blood Sample created
 exports.updateAUserSample = async (req, res) => {
   try {
