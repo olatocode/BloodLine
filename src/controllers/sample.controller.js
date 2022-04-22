@@ -56,7 +56,7 @@ exports.fetchAllUserSample = async (req, res) => {
 
 exports.fetchAUserSample = async (req, res) => {
   try {
-    const { id } = req.query;
+    const { id } = req.params;
     const showOne_BloodSample = await userSample.find({ _id: id });
 
     return res.status(200).json({

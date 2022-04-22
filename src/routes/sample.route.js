@@ -7,7 +7,7 @@ router.post('/addBloodSample', userSample.createUserSample);
 
 router.get('/viewBloodSamples', userSample.fetchAllUserSample);
 
-router.get('/viewOneBloodSample', userSample.fetchAUserSample);
+router.get('/viewOneBloodSample/:id', userSample.fetchAUserSample);
 
 router.patch('/updateBloodSample/:id', userSample.updateAUserSample);
 

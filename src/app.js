@@ -14,6 +14,16 @@ const port = process.env.PORT;
 const connect = require('./database/connectdb');
 connect;
 
+app.all('/', function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'X-Requested-With');
+  if (req.method === 'OPTIONS') {
+    res.header('Access-Control-Allow-Methods', 'GET PATCH DELETE POST');
+    return res.status(200).json({});
+  }
+  next();
+});
+
 // baser url
 app.get('/', (req, res) => {
   res.send({
