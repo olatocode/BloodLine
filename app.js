@@ -1,17 +1,19 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
-const userSampleRouter = require('./routes/sample.route');
+const helmet = require('helmet');
+const userSampleRouter = require('./src/routes/sample.route');
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
+app.use(helmet());
 dotenv.config();
 
 const port = process.env.PORT;
 
 // extracting database connection
-const connect = require('./database/connectdb');
+const connect = require('./src/database/connectdb');
 connect;
 
 app.all('/', function (req, res, next) {

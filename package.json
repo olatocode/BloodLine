@@ -7,8 +7,8 @@
   "license": "MIT",
   "main": ".eslintrc.js",
   "scripts": {
-    "start": "node ./src/app.js",
-    "dev": "nodemon ./src/app.js",
+    "start": "node ./app.js",
+    "dev": "nodemon ./app.js",
     "lint:fix": "eslint --fix ./*.js"
   },
   "prettier": {
@@ -20,6 +20,7 @@
     "dotenv": "^16.0.0",
     "eslint": "^8.9.0",
     "express": "^4.17.3",
+    "helmet": "^6.0.1",
     "mongoose": "^6.2.2",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
