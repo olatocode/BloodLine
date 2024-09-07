@@ -18,12 +18,14 @@
   },
   "dependencies": {
     "@treblle/express": "^0.0.2",
-    "dotenv": "^16.0.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.1.3",
     "eslint": "^8.9.0",
-    "express": "^4.17.3",
+    "express": "^4.19.2",
     "helmet": "^6.0.1",
-    "mongoose": "^6.2.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.6.1",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.22"
   }
 }

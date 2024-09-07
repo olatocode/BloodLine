@@ -4,6 +4,8 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const treblle = require('@treblle/express');
 const userSampleRouter = require('./routes/sample.route');
+const userRouter = require('./routes/user.route');
+
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -23,15 +25,15 @@ const port = process.env.PORT;
 const connect = require('./database/connectdb');
 connect;
 
-app.all('/', function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'X-Requested-With');
-  if (req.method === 'OPTIONS') {
-    res.header('Access-Control-Allow-Methods', 'GET PATCH DELETE POST');
-    return res.status(200).json({});
-  }
-  next();
-});
+// app.all('/', function (req, res, next) {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   res.header('Access-Control-Allow-Headers', 'X-Requested-With');
+//   if (req.method === 'OPTIONS') {
+//     res.header('Access-Control-Allow-Methods', 'GET PATCH DELETE POST');
+//     return res.status(200).json({});
+//   }
+//   next();
+// });
 
 // baser url
 app.get('/', (req, res) => {
@@ -42,6 +44,7 @@ app.get('/', (req, res) => {
 
 // base url for the app path in postman
 app.use('/api/v1', userSampleRouter);
+app.use('/api/v1', userRouter);
 
 app.listen(port, () => {
   console.log(`BloodLine is listening on port: ${port}`);
